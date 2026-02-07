@@ -1,4 +1,4 @@
- /* ------base rule...... */
+ /**************  base rule  ************* */
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -30,6 +30,7 @@ a {
     letter-spacing: 0.1rem;
     font-weight: 400;
     color: var(--para-color);
+    line-height: 1.5;
 }
 
 a {
@@ -41,17 +42,21 @@ li{
 }
 
 
- /* -------theme------- */
+ /************** theme **************/
 :root {
     --main-color : #0062ff;
     --supporting-color: #ebf3fe;
     --font-color:#424242;
     --bg-color:#ffffff;
+    --h-color: #0a043c;
+    --white-color: #ffffff;
     --para-color : #504e4d;
+    --btn-hover-bg-color: #003b99;
     --heading-color: #000a19;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
- /* -----------layout........ */
+ /************** layout ************* */
 
 
  .container{
@@ -59,9 +64,56 @@ li{
     margin: 0 auto;
     padding: 9.6rem 2.4rem;
  }
+ .grid {
+    display: grid;
+ }
+ .grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+ }
+.grid-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+ }
+
+ /**************  module  / reusable *************/
+
+ .section-common--title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+    gap: 6.4rem;
+ }
+
+ .section-common-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+ }
+
+ .section-common-subheading {
+    color: var(--heading-color);
+ }
+
+ .btn{
+    display: inline-block;
+    padding: 1.2rem 3.2rem;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+}
 
 
- /* ..............module.......... */
+  /************** State **************/
+  .btn:hover{
+    background-color: var(--btn-hover-bg-color);
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+  }
+
+ /*************  Navbar Section.   **************/
+
 .section-navbar {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -107,14 +159,107 @@ li{
    
 }
 
-  /* -----------State............... */
+    /*************** Navbar end Section ***************/
 
 
+    /************** hero section **************/
 
-   /* -----------Navbar start Section........ */
+    main{
+        position: relative;
+        background-image: linear-gradient(
+            #3d86fa,
+            #4484fb,
+            #679eff,
+            #b3d2ff,
+            #ebf3fe
+
+        );
+    }
+
+    /************** Shape Divider plugin **************/
+.custom-shape-divider-bottom-1770472392 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1770472392 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 59px;
+}
+
+.custom-shape-divider-bottom-1770472392 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/************** Shape Divider plugin end **************/
+    .section-hero .grid {
+        align-items: center;
+        gap: 3.5rem;
+
+        & .hero-subheading {
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-size: 1.7rem;
+            word-spacing: 0.2rem;
+            color: var(--h-color);
+            font-weight: 700;
+        }
+
+        & .hero-heading {
+            font-size: 5.8rem;
+            font-family: "Jost";
+            color: var(--h-color);
+            font-weight: 900;
+        }
+
+        .hero-para{
+            color: var(--white-color);
+            margin: 2rem 0 4rem;
+        }
+    }
 
 
+    .section-hero--image img {
+        width: 100%;
+        height: auto;
+    }
 
+    /***** End hero section *******/
 
+    /******** about Section ***********/
 
-    /* -----------Navbar end Section........ */
+    .section-about .about-div {
+        text-align: center;
+    }
+
+    .section-about img {
+        padding: 2.4rem;
+        background-color: var(--supporting-color);
+        width: 10rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+}
+
+.about-div .icon:hover>img {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    background: linear-gradient(#0575e6, #021b79);
+}
