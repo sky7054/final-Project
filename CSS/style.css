@@ -53,8 +53,9 @@ li{
     --para-color : #504e4d;
     --btn-hover-bg-color: #003b99;
     --heading-color: #000a19;
-    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --btn-box-shadow: rgba(100, 80, 90, 0.5) 0px 7px 29px 0px;
 }
+
 
  /************** layout ************* */
 
@@ -292,7 +293,9 @@ li{
 
 
 
-.section-course{}
+.section-course{
+    background-color: #f3f3f3;
+}
 
 .section-course .grid{
     gap: 4.5rem;
@@ -307,5 +310,54 @@ li{
 
 }
 
+.course-div:nth-child(1) .icon .fa-brands {
+   color: #68bf9b;
+   background-color: #e7f6ef;
+}
+
+.course-div:nth-child(2) .icon .fa-brands {
+   color: hsl(155, 76%, 67%);
+   background-color: #ccf7f7;
+}
+.course-div:nth-child(3) .icon .fa-brands {
+   color: #e0a9ca;
+   background-color:rgb(247, 223, 238);
+}
+.course-div:nth-child(4) .icon .fa-brands {
+   color: #eeb081;
+   background-color: #f6dfce;
+}
+.course-div:nth-child(5) .icon .fa-brands {
+   color: #1450a3;
+   background-color: #dce9fa;
+}
+.course-div:nth-child(6) .icon .fa-brands {
+   color: #68bf9b;
+   background-color: #a3e6c7;
+}
+
+/* -------- End Course Section --------- */
 
 
+.common-text--highlight {
+    background-color: greenyellow;
+    width: 6rem;
+    aspect-ratio: 1;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+}
+
+.section-why-choose .why-choose-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
