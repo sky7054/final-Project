@@ -69,6 +69,7 @@ li{
  .section-about .container:first-child,
  .section-blog .container:first-child,
  .section-course .container:first-child,
+ .section-contact-homepage,
  .section-why-choose .container:first-child {
     padding: 6.4rem 0 2.4rem 0;
  }
@@ -550,4 +551,8 @@ footer .footer-1--div .fa-brands:hover{
 }
 .footer-1--div{
     text-align: left;
+}
+
+footer .container{
+    padding-bottom: 0.5rem;
 }
